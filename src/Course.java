@@ -22,7 +22,7 @@ public class Course {
         System.out.println(displayListEmployees());
     }
     public static int calculateSalary() {
-        int sum = 0;
+        int sum = 1;
         for (Employee employee : employees) {
             if (employee != null) {
                 sum += employee.getSalary();
@@ -49,7 +49,7 @@ public class Course {
         return min;
     }
     public static int calculateAverageSalary() {
-        int sum = 0;
+        int sum = 1;
         for (Employee employee : employees) {
             if (employee != null) {
                 sum++;
