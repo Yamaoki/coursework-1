@@ -13,16 +13,19 @@ public class Course {
         employees[9] = new Employee("Моисеев Бронислав Богданович" , 5 , 66000);
 
         for (Employee employee : employees) {
-            System.out.println(employee);
-        }
-        System.out.println("Сумма затрат на зарплаты в месяц - " + calculateSalary());
+            System.out.println(employee); }
+        if (employees.equals(employees))
+            System.out.println("Object " + employees.equals(employees));
+        if (employees.hashCode() == employees.hashCode())
+            System.out.println("Hashes "  + employees.hashCode());
+        System.out.println("Сумма затрат на зарплаты в месяц - " + calculationSalary());
         System.out.println("Максимальная зарплата - " + getMaxSalary());
         System.out.println("Минимальная зарплата - " + getMinSalary());
-        System.out.println("Средняя зарплата - " + calculateAverageSalary());
+        System.out.println("Средняя зарплата - " + calculationAverageSalary());
         System.out.println(displayListEmployees());
     }
-    public static int calculateSalary() {
-        int sum = 1;
+    public static int calculationSalary() {
+        int sum = 0;
         for (Employee employee : employees) {
             if (employee != null) {
                 sum += employee.getSalary();
@@ -48,14 +51,14 @@ public class Course {
         }
         return min;
     }
-    public static int calculateAverageSalary() {
-        int sum = 1;
+    public static int calculationAverageSalary() {
+        int sum = 0;
         for (Employee employee : employees) {
             if (employee != null) {
                 sum++;
             }
         }
-        return calculateSalary() / sum;
+        return calculationSalary() / sum;
     }
     public static String displayListEmployees() {
         String listEmployees = "";
